@@ -1,0 +1,75 @@
+[
+   {
+      "Recipients": [{"email": "person1@ford.com","type": "Required"},{"email": "person2@ford.com","type": "Optional"},{"name": "confroom@ford.com", "type": "Resource"}],
+      "Subject": "Recurs Every 2 Days From March 1 to March 31",
+      "Body": "https://web.com/",
+      "Location": "WebEx",
+      "Importance": "Normal",
+      "Visibility": "Public",
+      "RecurrencePattern":
+      {
+         "RecurrenceType": "Daily",
+         "PatternStartDate": "2023-03-01T09:00-05:00",
+         "PatternEndDate": "2023-03-31T09:15-05:00",
+         "StartTime": "9:00 am",
+         "EndTime": "9:15 am",
+         "Duration": 15,
+         "Interval": 2
+      }
+   },
+   {
+      "Recipients": [{"email": "Person1@ford.com", "type": "Required"}],
+      "Subject": "Recurs Every 2 Weeks On Tuesday & Thursday",
+      "Body": "https://web.com/",
+      "Location": "WebEx",
+      "Importance": "Important",
+      "Visibility": "Private",
+      "RecurrencePattern":
+      {
+         "RecurrenceType": "Weekly",
+         "PatternStartDate": "2023-03-01T09:00-05:00",
+         "PatternEndDate": "2024-03-01T09:15-05:00",
+         "StartTime": "1980-01-01T09:00-05:00",
+         "StartTime": "1980-01-01T09:15-05:00",
+         "Duration": 15,
+         "Interval": 2,
+         "DayOfWeek": [{"Day": "Tuesday"}, {"Day": "Thursday"}]
+      }
+   },
+   {
+      "Recipients": [{"email": "person2@ford.com","type": "Optional"},{"name": "redteam2@groups.ford.com", "type": "Resource"}],
+      "Subject": "1:1 - Person1",
+      "Body": "https://web.com/dr",
+      "Location": "WebEx",
+      "Importance": "High",
+      "Visibility": "Private",
+      "RecurrencePattern":
+      {
+         "RecurrenceType": "Daily",
+         "PatternStartDate": "2023-03-01T00:00-05:00",
+         "PatternEndDate": "2023-03-01T00:00-05:00",
+         "StartTime": "9:00 am",
+         "EndTime": "9:15 am",
+         "Duration": 15,
+         "Interval": 2
+      }
+   },
+   {
+      "Recipients": [{"email": "Person1@ford.com", "type": "Required"}],
+      "Subject": "1:1 - Person2",
+      "Body": "https://web.com/dr",
+      "Location": "WebEx",
+      "RecurrencePattern":
+      {
+         "RecurrenceType": "MonthlyNth",
+         "PatternStartDate": "2023-03-01T00:00-05:00",
+         "PatternEndDate": "2023-03-01T00:00-05:00",
+         "StartTime": "1980-01-01T09:00-05:00",
+         "StartTime": "1980-01-01T09:15-05:00",
+         "Duration": 15,
+         "Interval": 2,
+         "Instance": 2,
+         "DayOfWeek": [{"Day": "Saturday"}]
+      }
+   }
+]
