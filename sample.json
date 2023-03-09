@@ -1,75 +1,135 @@
 [
    {
-      "Recipients": [{"email": "person1@ford.com","type": "Required"},{"email": "person2@ford.com","type": "Optional"},{"name": "confroom@ford.com", "type": "Resource"}],
-      "Subject": "Recurs Every 2 Days From March 1 to March 31",
+      "Recipients": [{"email": "person1@example.com","type": "Required"},{"email": "person2@example.com","type": "Optional"},{"email": "confroom@example.com", "type": "Resource"}],
+      "Subject": "Single Instance",
+      "Body": "Body",
+      "Location": "Location",
+      "Importance": "Normal",
+      "Sensitivity": "Normal",
+      "AllDayEvent": false,
+      "BusyStatus": "Busy",
+      "Start": "2023-03-06T14:30:00-05:00",
+      "End": "2023-03-06T15:00:00-05:00",
+      "Duration": 30,
+      "ReminderSet": true,
+      "ReminderMinutesBeforeStart": 15,
+      "ResponseRequested": false
+   },
+   {
+      "Recipients": [{"email": "person1@example.com","type": "Required"},{"email": "person2@example.com","type": "Optional"},{"email": "confroom@example.com", "type": "Resource"}],
+      "Subject": "Recurs Daily - Every 2 Days From March 1 to March 31",
       "Body": "https://web.com/",
       "Location": "WebEx",
       "Importance": "Normal",
-      "Visibility": "Public",
-      "RecurrencePattern":
-      {
-         "RecurrenceType": "Daily",
-         "PatternStartDate": "2023-03-01T09:00-05:00",
-         "PatternEndDate": "2023-03-31T09:15-05:00",
-         "StartTime": "9:00 am",
-         "EndTime": "9:15 am",
-         "Duration": 15,
-         "Interval": 2
-      }
-   },
-   {
-      "Recipients": [{"email": "Person1@ford.com", "type": "Required"}],
-      "Subject": "Recurs Every 2 Weeks On Tuesday & Thursday",
-      "Body": "https://web.com/",
-      "Location": "WebEx",
-      "Importance": "Important",
-      "Visibility": "Private",
-      "RecurrencePattern":
-      {
-         "RecurrenceType": "Weekly",
-         "PatternStartDate": "2023-03-01T09:00-05:00",
-         "PatternEndDate": "2024-03-01T09:15-05:00",
-         "StartTime": "1980-01-01T09:00-05:00",
-         "StartTime": "1980-01-01T09:15-05:00",
-         "Duration": 15,
-         "Interval": 2,
-         "DayOfWeek": [{"Day": "Tuesday"}, {"Day": "Thursday"}]
-      }
-   },
-   {
-      "Recipients": [{"email": "person2@ford.com","type": "Optional"},{"name": "redteam2@groups.ford.com", "type": "Resource"}],
-      "Subject": "1:1 - Person1",
-      "Body": "https://web.com/dr",
-      "Location": "WebEx",
-      "Importance": "High",
-      "Visibility": "Private",
+      "Sensitivity": "Normal",
       "RecurrencePattern":
       {
          "RecurrenceType": "Daily",
          "PatternStartDate": "2023-03-01T00:00-05:00",
-         "PatternEndDate": "2023-03-01T00:00-05:00",
-         "StartTime": "9:00 am",
-         "EndTime": "9:15 am",
+         "PatternEndDate": "2023-03-31T00:00-05:00",
+         "StartTime": "1980-01-01T09:00-05:00",
+         "EndTime": "1980-01-01T09:15-05:00",
          "Duration": 15,
          "Interval": 2
       }
    },
    {
-      "Recipients": [{"email": "Person1@ford.com", "type": "Required"}],
-      "Subject": "1:1 - Person2",
-      "Body": "https://web.com/dr",
+      "Recipients": [{"email": "Person1@example.com", "type": "Required"}],
+      "Subject": "Recurs Every 2 Weeks On Tuesday & Thursday",
+      "Body": "https://web.com/",
       "Location": "WebEx",
+      "Importance": "Low",
+      "Sensitivity": "Confidential",
+      "RecurrencePattern":
+      {
+         "RecurrenceType": "Weekly",
+         "PatternStartDate": "2023-03-01T14:30-05:00",
+         "PatternEndDate": "2024-03-01T15:15-05:00",
+         "StartTime": "1980-01-01T14:30-05:00",
+         "EndTime": "1980-01-01T15:15-05:00",
+         "Duration": 45,
+         "Interval": 2,
+         "DayOfWeekMask": ["Tuesday", "Thursday"]
+      }
+   },
+   {
+      "Recipients": [{"email": "person2@example.com","type": "Optional"},{"email": "collabspace@example.com", "type": "Resource"}],
+      "Subject": "Monthly - 5th Day Every 2 Months Between March 1 2023 through Feb 28 2024",
+      "Body": "Body",
+      "Location": "WebEx",
+      "Importance": "High",
+      "Sensitivity": "Personal",
+      "RecurrencePattern":
+      {
+         "RecurrenceType": "Monthly",
+         "PatternStartDate": "2023-03-01T00:00-05:00",
+         "PatternEndDate": "2024-02-28T00:00-05:00",
+         "StartTime": "1980-01-01T09:00-05:00",
+         "EndTime": "1980-01-01T09:15-05:00",
+         "Duration": 15,
+         "Interval": 2,
+         "DayOfMonth": 5
+      }
+   },
+   {
+      "Recipients": [{"email": "Person1@example.com", "type": "Required"}],
+      "Subject": "MonthlyNth - 2nd Tuesday of the Month, Every 3 Months Between March 1 2023 and Feb 28 2025",
+      "Body": "Body",
+      "Location": "WebEx",
+      "Importance": "Normal",
+      "Sensitivity": "Private",
       "RecurrencePattern":
       {
          "RecurrenceType": "MonthlyNth",
          "PatternStartDate": "2023-03-01T00:00-05:00",
-         "PatternEndDate": "2023-03-01T00:00-05:00",
+         "PatternEndDate": "2025-02-28T00:00-05:00",
          "StartTime": "1980-01-01T09:00-05:00",
-         "StartTime": "1980-01-01T09:15-05:00",
+         "EndTime": "1980-01-01T09:15-05:00",
          "Duration": 15,
-         "Interval": 2,
+         "Interval": 3,
          "Instance": 2,
-         "DayOfWeek": [{"Day": "Saturday"}]
+         "DayOfWeekMask": ["Tuesday"]
+      }
+   },
+   {
+      "Recipients": [{"email": "person2@example.com","type": "Optional"},{"email": "collabspace@example.com", "type": "Resource"}],
+      "Subject": "Yearly - 5th Day of May Every 2 Years Between May 5 2023 through May 5 2027",
+      "Body": "Body",
+      "Location": "Location",
+      "Importance": "High",
+      "Sensitivity": "Personal",
+      "RecurrencePattern":
+      {
+         "RecurrenceType": "Yearly",
+         "PatternStartDate": "2023-05-05T00:00-05:00",
+         "PatternEndDate": "2027-05-05T00:00-05:00",
+         "StartTime": "1980-01-01T09:00-05:00",
+         "EndTime": "1980-01-01T09:15-05:00",
+         "Duration": 15,
+         "Interval": 24,
+         "DayOfMonth": 5,
+         "MonthOfYear": 5
+      }
+   },
+   {
+      "Recipients": [{"email": "Person1@example.com", "type": "Required"}],
+      "Subject": "YearlyNth - 3rd Wednesday of May, Every 3 Years Between March 1 2023 and March 1 2029",
+      "Body": "Body",
+      "Location": "Location",
+      "Importance": "Normal",
+      "Sensitivity": "Confidential",
+      "RecurrencePattern":
+      {
+         "RecurrenceType": "YearlyNth",
+         "PatternStartDate": "2023-03-01T00:00-05:00",
+         "PatternEndDate": "2029-03-01T00:00-05:00",
+         "StartTime": "1980-01-01T09:00-05:00",
+         "EndTime": "1980-01-01T09:15-05:00",
+         "Duration": 15,
+         "Interval": 36,
+         "Instance": 3,
+         "DayOfWeekMask": ["Wednesday"],
+         "MonthOfYear": 5
       }
    }
 ]
